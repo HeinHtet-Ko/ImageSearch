@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    tool:context=".ui.gallery.GalleryFragment"
+    android:background="#414746"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        tool:listitem="@layout/unsplash_photo_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/gallery_recycler">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tool:visibility="visible"
+        android:id="@+id/gallery_progressbar">
+
+    </ProgressBar>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/retryBtn"
+        android:text=" Some Error Occurred! "/>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Results Found"/>
+    <Button
+
+        tool:visibility="visible"
+        android:text="Retry"
+        android:visibility="gone"
+        android:id="@+id/retryBtn"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/unsplash_item_imageview">
+
+    </ImageView>
+    <View
+        android:layout_alignBottom="@id/unsplash_item_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/gradient_over">
+
+    </View>
+    <TextView
+        android:id="@+id/unsplash_item_username"
+        android:gravity="center_vertical"
+        android:textColor="#FFF"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_margin="8dp"
+        android:layout_alignBottom="@id/unsplash_item_imageview"
+        tool:text="@string/app_name"
+        android:drawableStart="@drawable/ic_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+</RelativeLayout>
